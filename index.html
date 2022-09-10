@@ -13,20 +13,23 @@
         <div class="wrapper">
             <header class="header">
                 <div class="header__container">
-                     <a href="#" class="header__logo">
+                    <a href="#" class="header__logo">
                         <img src="./img/logo.svg" alt="Логотип">
-                     </a>
-                     <nav class="header__menu menu">
-                        <ul class="menu__list">
-                            <li class="menu__item"><a href="#" class="menu__link">HOME</a></li>
-                            <li class="menu__item"><a href="#" class="menu__link">FEATURES</a></li>
-                            <li class="menu__item"><a href="#" class="menu__link">SUPPORT</a></li>
-                            <li class="menu__item"><a href="#" class="menu__link">CONTACT US</a></li>
-                        </ul>
-                     </nav>
-                     <div class="header__button">
+                    </a>
+                    <div class="header__menu menu">
+                        <nav id="menu" class="menu__body"> <!--? бургер без js-->
+                            <ul class="menu__list">
+                                <li class="menu__item"><a href="#" class="menu__link">HOME</a></li>
+                                <li class="menu__item"><a href="#" class="menu__link">FEATURES</a></li>
+                                <li class="menu__item"><a href="#" class="menu__link">SUPPORT</a></li>
+                                <li class="menu__item"><a href="#" class="menu__link">CONTACT US</a></li>
+                            </ul>
+                        </nav>
+                    </div>
+                    <div class="header__button">
                         <a href="#" class="button button_blue">DOWNLOAD</a>
-                     </div>
+                        <a href="#menu" class="icon-menu"><span></span></a> <!--? бургер -->
+                    </div>
                 </div>
             </header>
             <main class="main">

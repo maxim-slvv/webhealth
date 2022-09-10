@@ -15,3 +15,107 @@ ol,ul,li{list-style: none;}
 img{vertical-align: top;}
 h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight: inherit;}
 /*--------------------*/
+
+body {
+    font-family: Rubik;
+    font-size: 12px;
+    color: #616161;
+}
+/*--------------------*/
+.wrapper {
+    overflow: hidden;
+    display: flex;
+    flex-direction: column; /*это все нужно что бы прибить подвал к низу экрана*/
+    min-height: 100%;
+}
+/*--------------------*/
+.main {
+    flex: 1 1 auto; /*блок с контентом увеличится и прижмет футер к низу*/
+}
+
+[class*="__container"] { /*  любой тэг в классе которого будет такая строка - получит эти стили */
+    max-width: 1012px;
+    margin: 0px auto;
+}
+
+.header {
+    position: absolute;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 50;
+   
+}
+.header__container {
+    display: flex;
+    height: 114px;
+    align-items: center;
+}
+.header__logo {
+}
+.header__menu {
+    flex: 1 1 auto;
+}
+.menu {
+    display: flex;
+    justify-content: flex-end;
+
+}
+.menu__list {
+    display: flex;
+}
+.menu__item {
+    margin-right: 40px;
+}
+.menu__link {
+    font-family: Raleway;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 10px;
+    line-height: 1.2; /* 12px/10==1.2 */
+    letter-spacing: 1px;
+    color: #000000;
+}
+.header__button {
+    flex: 0 0 225px;
+    display: flex;
+    justify-content: flex-end;
+}
+.button {
+    display: inline-block;
+    font-family: Raleway;
+    text-transform: uppercase;
+    font-style: normal;
+    font-weight: 800;
+    font-size: 10px;
+    line-height: 1.2;
+    letter-spacing: 1px;
+    color: #FCFDFE;
+    padding: 14px 30px;
+    border-radius: 5px;
+    background-color: #EC5863;
+    transition: background-color 0.3s ease 0s;
+}
+.button:hover {
+    background-color: #e93743;
+}
+
+.button_blue {
+    background-color: #4285F4;
+}
+.button_blue:hover  {
+    background-color: #1f6ff0;
+}
+
+
+
+
+
+
+
+
+
+.main {
+}
+.footer {
+}

@@ -75,6 +75,8 @@ body {
 }
 
 .header__logo {
+    position: relative;
+    z-index: 5;
 }
 
 .header__menu {
@@ -105,6 +107,8 @@ body {
 }
 
 .header__button {
+    position: relative;
+    z-index: 5;
     flex: 0 0 225px;
     display: flex;
     justify-content: flex-end;
@@ -126,11 +130,25 @@ body {
     .menu__body {
         position: fixed;
         top: 0;
-        left: 0;
+        left: -100%;
         width: 100%;
         height: 100%;
-        background-color: #EC5863;
+        background-color: #fdfdfd;
+        overflow: auto; /*если появится больше пунктов меню то будет скролл*/
         padding: 90px 15px 30px;
+        transition: all 0.3s ease 0s;
+    }
+    .header:target .menu__body{
+        left: 0;
+    }
+    .header:target .menu__body:before{
+        content: "";
+        position: fixed;
+        top: 0;
+        left: 0;
+        height: 70px;
+        width: 100%;
+        background-color: #fff;
     }
     .menu__item {
         margin-bottom: 25px;
@@ -144,9 +162,13 @@ body {
         align-items: center;
     }
     .menu__link {
-        color: #fff;
+        /* color: #fff; */
         font-size: 20px;
     }
+    .menu__link:hover {
+        text-decoration: underline;
+    }
+  
 }
 
 @media (max-width: 479.98px) {
@@ -186,31 +208,69 @@ body {
 }
 
 /*--------BURGER-----------*/
-
+.close-icon-menu,
 .icon-menu {
     display: none;
 }
-
-
 @media (max-width: 767.98px) {
+    .close-icon-menu,
     .icon-menu {
         display: flex;
+        position: relative;
+        flex: 0 0 23px;
+        height: 30px;
+        margin-left: 20px;
         flex-direction: column;
         justify-content: space-between;
-        position: relative;
-        flex: 0 0 30px;
-        height: 18px;
-        margin-left: 20px;
+    }
+    .close-icon-menu {
+        flex: 0 0 23px;
     }
     .icon-menu::before, 
     .icon-menu::after {
         content: "";
         background-color: #000;
         height: 2px;
+        position: relative;
+        
     }
+    .icon-menu::before, .close-icon-menu::before {
+        margin-top: 5px;
+    }
+    .icon-menu::after, .close-icon-menu::after{
+        margin-bottom: 5px;
+    }
+   
     .icon-menu span {
         height: 2px;
         background-color: #000;
+        justify-content: start;
+    }
+
+    .close-icon-menu {
+        display: none;
+    }
+
+    .close-icon-menu::before, 
+    .close-icon-menu::after {
+        content: "";
+        background-color: #000;
+        height: 2px;
+        transform-origin: -1px 40% 0;
+        
+    }
+    .close-icon-menu::before {
+        transform: rotate(45deg);
+    }
+    .close-icon-menu::after {
+        transform: rotate(-45deg);
+    }
+    .header:target .icon-menu {
+        display: none;
+        
+    }
+    .header:target .close-icon-menu {
+        display: flex;
     }
 }
 

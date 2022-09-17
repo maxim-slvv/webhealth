@@ -281,6 +281,11 @@ body {
 .block-text {
    
 }
+.block-text_center {
+    text-align: center;
+   
+}
+
 .block-text__title {
     font-weight: 700;
     font-size: 44px;
@@ -295,6 +300,10 @@ body {
 }
 .block-text__title_blue span {
     color: #4285F4;
+}
+.block-text__text_mw { /*mw - это max-width*/
+    max-width: 620px;
+    margin: 0px auto;
 }
 .block-text__text {
     line-height: 138.5%;
@@ -422,7 +431,7 @@ body {
 /*==================================================================*/
 
 .stay-safe {
-    padding: 50px 0;
+    padding: 0px 0;
 }
 .stay-safe__container {
     display: flex;
@@ -438,7 +447,7 @@ body {
 
 .media-stay-safe {
     width: 373px;
-    padding: 56px 0 27px 0 ;
+    padding: 30px 0 27px 0;
     text-align: center;
     position: relative;
 }
@@ -494,7 +503,7 @@ body {
 
 @media (min-width: 991.98px) {
     .stay-safe {
-        padding: 40px 0;
+        padding: 30px 0;
     }
 }
 @media (min-width: 991.98px) {
@@ -522,6 +531,9 @@ body {
         bottom: 0;
         left: 50px;
     }
+    .stay-safe__block-text {
+        margin-bottom: -10px;
+    }
 }
 @media (max-width: 479.98px) {
     .media-stay-safe { /*оставлю по своему вкусу адаптива*/
@@ -532,7 +544,7 @@ body {
 @media (max-width: 404.98px) {
     .media-stay-safe { /*оставлю по своему вкусу адаптива*/
         width: 290px;
-        padding: 30px 0 27px 0 ;
+        padding: 30px 0 30px 0 ;
     }
     .stay-safe__item_1 {
         top: 0;
@@ -554,7 +566,7 @@ body {
 
 .experts {
     background-color: #FCFDFE;
-    padding: 40px 0 116px;
+    padding: 40px 0 80px;
 }
 .experts__container {
 }
@@ -573,6 +585,10 @@ body {
     flex: 0 1 50%;
     position: relative;
     padding-bottom: 30%;
+    background: #FFFFFF;
+    box-shadow: 0px 4px 18px rgba(88, 126, 236, 0.18);
+    border-radius: 8px;
+    overflow: hidden;
 }
 .experts__video iframe{
     position: absolute;
@@ -585,7 +601,7 @@ body {
 
 @media (max-width: 767.98px) {
     .experts {
-        padding: 103px 0 116px;
+        padding: 55px 0 40px;
     }
     .experts__body {
         align-items: stretch;
@@ -602,17 +618,15 @@ body {
 
 .experts__block-text{
     max-width: 400px;
-    
 }
 .statistics-experts {
     max-width: 655px;
     margin: 0 auto;
     background-color: #fff;
     position: relative;
-    
 }
 .statistics-experts__body {
-    background: #FFFFFF;
+    background-color: rgba(255, 255, 255, 0.95);
     box-shadow: 0px 2px 24px rgba(88, 126, 236, 0.15);
     border-radius: 16px;
     position: relative;
@@ -701,4 +715,17 @@ body {
     .statistics-experts__decor_3 {
         top: 140px;
     }
+}
+
+/*==================================================================*/
+
+.healthcare {
+
+}
+.healthcare__container {
+}
+.healthcare__block-text {
+    margin-bottom: 45px;
+}
+.block-text {
 }

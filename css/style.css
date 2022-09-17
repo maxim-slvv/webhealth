@@ -92,7 +92,6 @@ body {
 .menu__link:hover {
     border-bottom: 2px solid #EC5863;
 }
-
 .menu__link {
     font-family: Raleway;
     text-transform: uppercase;
